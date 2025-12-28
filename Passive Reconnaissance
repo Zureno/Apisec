@@ -9,3 +9,29 @@ intitle:"index.of" intext:"api.txt"                                        Finds
 inurl:"/api/v1" intext:"index of /"                                        Finds potentially interesting API directories.
 ext:php inurl:"api.php?action="                                            Finds all sites with a XenAPI SQL injection vulnerability. (This query was posted in 2016; four years later, there are currently 141,000 results.)
 intitle:"index of" api_key OR "api key" OR apiKey -pool                    This is one of my favorite queries. It lists potentially exposed API keys.
+
+
+
+<h2>Passive Reconnaissance Matrix</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Query</th>
+      <th>Expected result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WordPress</td>
+      <td><code>&lt;paste query here&gt;</code></td>
+      <td>Describe what it’s meant to find (authorized testing only).</td>
+    </tr>
+    <tr>
+      <td>API Keys</td>
+      <td><code>&lt;paste query here&gt;</code></td>
+      <td>Describe what it’s meant to find (authorized testing only).</td>
+    </tr>
+  </tbody>
+</table>
