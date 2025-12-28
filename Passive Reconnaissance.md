@@ -8,9 +8,9 @@
 
 ## Google Dorking (Matrix)
 
-| Category | Query (placeholder) | Expected Results | What to Validate (Defensive) | Recommended Remediation |
+| Google Dorking Query  | Expected results |
 |---|---|---|---|---|
-| WordPress Enumeration | **[REDACTED_QUERY_1]** | Identifies publicly accessible endpoints that may reveal usernames or metadata. | Confirm endpoint is intended to be public; check for user enumeration; verify rate-limiting. | Disable public user listing; tighten REST permissions; add rate-limiting/WAF rules. |
+| inurl:"/wp-json/wp/v2/users" | 	Finds all publicly available WordPress API user directories | 
 | Public Directory Listings | **[REDACTED_QUERY_2]** | Finds directory indexes and exposed files that should not be public. | Confirm if directory listing is enabled; review what files are accessible. | Disable directory indexing; restrict access; move sensitive files out of web root. |
 | API Directories | **[REDACTED_QUERY_3]** | Locates API directories / routes that may expose documentation or debug paths. | Validate auth requirements; confirm no debug endpoints; check access logs. | Require auth; remove debug routes; restrict by IP/VPN; add WAF policies. |
 | Sensitive File Exposure | **[REDACTED_QUERY_4]** | Detects potentially exposed config/key/token files. | Confirm if any secrets are present; rotate if exposed; verify repo history. | Rotate keys; add secret scanning; ensure `.gitignore`; move secrets to vault/KMS. |
