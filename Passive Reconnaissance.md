@@ -8,8 +8,8 @@
 
 ## Google Dorking (Matrix)
 
-| Google Dorking Query  | Expected results |
-|---|---|---|---|---|
+| Google Dorking Query  | Expected results 
+|---|
 | inurl:"/wp-json/wp/v2/users" | 	Finds all publicly available WordPress API user directories | 
 | Public Directory Listings | **[REDACTED_QUERY_2]** | Finds directory indexes and exposed files that should not be public. | Confirm if directory listing is enabled; review what files are accessible. | Disable directory indexing; restrict access; move sensitive files out of web root. |
 | API Directories | **[REDACTED_QUERY_3]** | Locates API directories / routes that may expose documentation or debug paths. | Validate auth requirements; confirm no debug endpoints; check access logs. | Require auth; remove debug routes; restrict by IP/VPN; add WAF policies. |
