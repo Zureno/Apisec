@@ -9,13 +9,8 @@
 ## Google Dorking (Matrix)
 
 | Google Dorking Query  | Expected results 
-|---|
+|---|---|
 | inurl:"/wp-json/wp/v2/users" | 	Finds all publicly available WordPress API user directories | 
-| Public Directory Listings | **[REDACTED_QUERY_2]** | Finds directory indexes and exposed files that should not be public. | Confirm if directory listing is enabled; review what files are accessible. | Disable directory indexing; restrict access; move sensitive files out of web root. |
-| API Directories | **[REDACTED_QUERY_3]** | Locates API directories / routes that may expose documentation or debug paths. | Validate auth requirements; confirm no debug endpoints; check access logs. | Require auth; remove debug routes; restrict by IP/VPN; add WAF policies. |
-| Sensitive File Exposure | **[REDACTED_QUERY_4]** | Detects potentially exposed config/key/token files. | Confirm if any secrets are present; rotate if exposed; verify repo history. | Rotate keys; add secret scanning; ensure `.gitignore`; move secrets to vault/KMS. |
-| Injection Indicators (Research) | **[REDACTED_QUERY_5]** | Finds pages likely to accept parameters and require security review. | Confirm parameter handling; validate input validation; check for error leakage. | Parameterized queries; input validation; WAF rules; safe error handling. |
-| “API Key” Mentions | **[REDACTED_QUERY_6]** | Surfaces pages mentioning keys/tokens that may be accidentally published. | Confirm content is not leaking secrets; validate no hardcoded tokens. | Remove secrets; rotate; enable DLP; add pre-commit secret detection. |
 
 ---
 
