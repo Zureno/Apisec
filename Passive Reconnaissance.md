@@ -18,7 +18,15 @@
 
 ---
 
-## GitDorking
+## Showdan
+ 
+| Shodan Queries | Purpose
+|---|---|
+| hostname:"targetname.com" | Using hostname will perform a basic Shodan search for your target’s domain name. This should be combined with the following queries to get results specific to your target. | 
+| "content-type: application/json" | APIs should have their content-type set to JSON or XML. This query will filter results that respond with JSON. |
+|"content-type: application/xml"  | This query will filter results that respond with XML. | 
+| "200 OK" |You can add "200 OK" to your search queries to get results that have had successful requests. However, if an API does not accept the format of Shodan’s request, it will likely issue a 300 or 400 response.|
+| "wp-json" | This will search for web applications using the WordPress API. | 
 
 
 ---
